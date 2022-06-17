@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+   
+    <style>
+         form{
+            height:auto;
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            line-height: 60px;
+            margin-top: 5%;
+            border-radius: 10px;
+        }
+        #fo{
+            height:auto;
+            width: 350px;
+            margin: auto;
+          
+        }
+        button{
+            width: 100%;
+            height:35px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button+button{
+            background-color:#E0E0E0;
+            color: black;
+        }
+        input{
+            width: 98%;
+            height:35px;
+        }
+        body{
+            background-color: #E0E0E0;
+
+        }
+        h3{
+            margin-top:-8px;margin-bottom: -10px;
+            font-family: arial;
+        }
+        #checkbox{
+            height: 15px;
+            width: 15px;
+        }
+        p{
+            margin-top: -62px;
+            margin-left: 25px;
+            font-family: arial;
+            font-size: 15px;
+            color: gray;
+            margin-bottom: -15px;
+        }
+        img{
+        height: 50px;
+        width: 50px;
+        margin-left: 45%;
+       }
+    </style>
+</head>
+<body>
+  <form>        
+        <div id="fo">
+            <h3>Sign In</h3>
+        
+        <input id="email" type="email" placeholder="Enter Email address">
+        <input id="password" type="password" placeholder="Enter password">
+        <input type="checkbox" id="checkbox"><p>Keep me signed in</p>
+        <button class="bg-primary">Sign In</button>
+    </form>
+        <button class="bg-primary" id="koti" >Create new account</button>
+        <br><br>
+        <hr style="width: 45%;margin-left:5px;margin-top: -15px;">
+        <hr style="width: 45%;margin-right:5px;margin-top: -10px;">
+        <p style="text-align: center;margin-top: -40px;margin-left: -2px;">or</p>
+         <img  src="/google.png" alt="n">
+       </div>
+    
+</body>
+</html>
+<script>
+    let form=document.querySelector("form")
+    let userData=JSON.parse(localStorage.getItem("userData"))||[];
+    form.addEventListener("submit",function(event){
+        event.preventDefault()
+        let data1={
+            email:form.email.value,
+            password:form.password.value,
+        }
+        if(checkSignIn(data1.email,data1.password)===true){
+            localStorage.setItem("signIn",JSON.stringify(data1));
+            alert("Sign in Successful")
+            window.location.href="index.html"
+        }
+        else{
+            alert("Wrong User name or Password")
+        }
+    })
+    function checkSignIn(email,password){
+       let filtered=userData.filter(function(element){
+        return element.email===email &&element.password==password;
+       })
+       if(filtered.length>0){
+        return true;
+       }
+       else{
+        return false;
+       }
+    }
+    document.querySelector("#koti").addEventListener("click",myFunction)
+    function myFunction(){
+        window.location.href= "signup.html"
+    }
+</script>
+

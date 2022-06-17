@@ -1,0 +1,101 @@
+
+/* ********  NEW ARRIVAL page Added *********/
+#tea{
+    background-color: #f0e9e9;
+    width: 100%;
+    padding-bottom: 30px;
+    height: 100%;
+}
+#cont{
+    display: grid;
+    width: 70%;
+    margin: auto;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 10px;
+   margin-top: 30px;
+}
+#to{
+    height: 150px;
+    width: auto;
+    background-color: white;
+    
+    margin-left: -20px;
+}
+#to>h1 {
+    
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    font-family: arial;
+    
+}
+#cont>div {
+    box-shadow: rgba(19, 12, 46, 0.15) 0px 48px 100px 0px;
+    position: relative;
+    background-color: white;
+    border-radius: 5px;
+
+}
+#cont>div:hover{
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#cont>div>img {
+    width: 100%;
+    height: 60%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+
+#sub{
+    margin: auto;
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    border: 0px solid red;
+    position: absolute;
+    bottom: 18px;
+    left: 10px;
+    height: 30px;
+    
+    
+}
+
+
+#cont button:hover{
+
+    background-color: orangered;
+    color: white;
+}
+
+
+#cont>div>p {
+    font-family: "Open Sans", sans-serif !important;
+    font-weight: normal;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+#cont div>h4 {
+    font-family: "Open Sans", sans-serif !important;
+    margin-left: 10px;
+    color: red;
+    font-size: 17px;
+}
+
+#cont button {
+    position: absolute;
+    bottom: 15px;
+    left: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: white;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 40%;
+}

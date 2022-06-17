@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping Address</title>
+    
+    <style>
+        body{
+            margin-bottom: 100px;
+        }
+#paytop{
+    height: 100px;
+    width: auto;
+    background-image: linear-gradient(to bottom, #318FFB, #06f);
+    margin-left: -20px;
+    padding-right: 50px;
+   
+}
+#paytop>img{
+    margin-left: 12%;
+    margin-top: 2%;
+}
+#paytop>img+h2{
+    font-family: arial;
+    margin-top: -50px;
+    margin-left: 35%;
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+}
+h1{
+    margin-left: 10%;
+    font-family: arial;
+    font-size: 20px;
+}
+/**********************    paytop section ended   **************************/
+#pay{
+    height:600px;
+    width: 80%;
+    margin: auto;
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;
+    line-height: 60px;
+}
+#pay>form input,#pay>form select{
+    height: 30px;
+    width: 30%;
+}
+form>button{
+    width: 13%;
+    height: 40px;
+    margin-top: 20px;
+    margin-left: 12%;
+    background-image: linear-gradient(to bottom, #318FFB, #06f);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+<body>
+    <div id="paytop">
+    <img src="/logo.png" alt="">
+    <h2>Secure Checkout</h2>
+</div>
+    <h1>Shipping Address</h1>
+    <div id="pay">
+   
+    <form id="form">
+        <label for="First Name" > First Name :</label>
+         <input id="a" type="text"><br>
+
+         <label for="First Name">Last Name :</label>
+          <input id="b" type="text"><br>
+          
+          <label for="">Country/Region</label>
+        <select name="" id="c">
+            <option value="India">India</option>
+            <option value="USA">USA</option>
+            <option value="USA">Russia</option>
+            <option value="USA">France</option>
+        </select><br>
+
+        <label for="">State/Province :</label>
+        <select name="" id="d">
+            <option value="India">Andhra Pradesh</option>
+            <option value="USA">Telanga</option>
+            <option value="USA">Madhya Pradesh</option>
+            <option value="USA">Tamil Nadu</option>
+            <option value="USA">Kerla</option>
+        </select><br>
+
+        <label for="">City / village :</label>
+         <input id="e" type="text" placeholder="Your City"><br>
+
+         <label for="">Zip/Postalcode</label>
+         <input id="f" type="text" placeholder="Your ZIP/postal code"><br>
+
+         <label for="">Address line 1:</label>
+         <input id="g" type="text" placeholder="Street Address, Company name"><br>
+
+         <label for="">Address line 2:</label>
+         <input id="h" type="text" placeholder="Appartment ,Unit ,floor"><br>
+
+         <label for="">Phone Number</label>
+         <input id="i" type="number" placeholder="Phone number"><br>
+
+         <button id="j" id="but">Continue </button>
+            
+        
+    </form>
+</div>
+
+</body>
+</html>
+<script>
+   document.querySelector("#form").addEventListener("submit",myFo)
+   var jobArr = JSON.parse(localStorage.getItem("jobList")) || [];
+   function myFo(){
+   
+      event.preventDefault();
+      var jobObj = {
+        a: form.a.value,
+        b: form.b.value,
+        c: form.c.value,
+        d: form.d.value,
+        e: form.e.value,
+        f: form.f.value,
+        g: form.g.value,
+        h: form.h.value,
+        i: form.i.value,
+        j: form.j.value,
+
+      };
+      jobArr.push(jobObj);
+      console.log(jobArr);
+      localStorage.setItem("jobList", JSON.stringify(jobArr));
+      // redirect to applied jobs
+      window.location.href = "payment.html";
+    }
+   
+</script>

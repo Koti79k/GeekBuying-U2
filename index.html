@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+   <link rel="stylesheet" href="/index.css">
+  <link rel="stylesheet" href="/navbar.css">
+   <!-- #region boostrap links-->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+</head>
+<body><!-- #region nav bar region-->
+    <div class="bg-primary">
+    <nav class="nav justify-content-end bg-primary position-static ">
+      <!-- #region first drop down menu-->
+     
+      <div class="dropdown ">
+         <a href="#" class=" nav-item nav-link text-white dropdown-toggle" data-toggle="dropdown">Saving Big with our app!</a>
+           <div class="dropdown-menu kot dropdown-menu-right ">
+                <a href="#" class="dropdown-item" id="text">Get exclusive app deals and discounts,<br>
+                   download our app & SAVE</a>
+                <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png"style="width:60%" class="dropdown-item">
+              <div id="ko">
+                <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" class="dropdown-item "></img>
+                <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" class="dropdown-item "></img>
+                <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" class="dropdown-item "></img>
+              </div>
+                 <hr width="80%" color="white"  style="margin-top: 40px;"  >
+                 <a href="#" class="dropdown-item" id="text" style="margin-top: -15px;">Go to mobile site</a>
+          </div>
+        </div>
+         <!-- #region second drop down menu-->
+        <div class="dropdown">
+          <a href="#" class=" nav-item nav-link text-white dropdown-toggle" data-toggle="dropdown">Language</a>
+          <div class="dropdown-menu dropdown-menu-right" >
+                 <a href="#" class="dropdown-item">English</a>
+                 <a href="#" class="dropdown-item">Italiano</a>
+                 <a href="#" class="dropdown-item">Deutsch</a>
+                 <a href="#" class="dropdown-item">Español</a>
+                 <a href="#" class="dropdown-item">Français</a>
+                 <a href="#" class="dropdown-item">Português</a>
+                 <a href="#" class="dropdown-item">Slovenčina</a>
+                 <a href="#" class="dropdown-item">Magyar</a>
+                 
+           </div>
+         </div>
+         <div class="dropdown">
+          <a href="#" class=" nav-item nav-link text-white dropdown-toggle" data-toggle="dropdown">Support Center</a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a href="#" class="dropdown-item">Live Chat</a>
+            <a href="#" class="dropdown-item">Ticket</a>
+            <a href="#" class="dropdown-item">Help Center</a>
+          </div>
+         </div>
+       
+      </nav>
+    </div>
+    
+    
+                      <!-- #region second nav bar-->
+    <div class="bg-primary">
+      <hr  style="margin-top: -1px;background-color: #E0E0E0;" >
+     
+       <!-- #region search bar-->
+       <nav class="nav justify-content-start bg-primary position-static ">
+        <img src="/logo.png" alt="n" >
+        <input type="search" id="searchBar" style="outline: none;" placeholder="Search by keywords" >
+    <!-- #region dropdown menu in search bar-->
+    
+        <div class="dropdown " id="button1">  
+           <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">All Categories</button>
+          <div class="dropdown-menu dropdown-menu-left">
+                  <a href="#" class="dropdown-item">All Categories</a>
+                  <a href="#" class="dropdown-item">Smart Home & Garden</a>                                                           
+                  <a href="#" class="dropdown-item">Phones & Accessories</a>
+                  <a href="#" class="dropdown-item">Computers, Tablets & Accessories</a>             
+                  <a href="#" class="dropdown-item">Wearable Devices </a>                                                                       
+                  <a href="#" class="dropdown-item">Automobiles & Motorcycles</a>
+                  <div id="right">
+                    <a href="#" class="dropdown-item">Sports & Outdoors</a>               
+                    <a href="#" class="dropdown-item">Consumer Electronics </a>                                                                          
+                    <a href="#" class="dropdown-item">TV Boxes & Mini PCs</a>               
+                    <a href="#" class="dropdown-item">Toys & Hobbies </a>                       
+                    <a href="#" class="dropdown-item">Security System</a>                                                                                       
+                    <a href="#" class="dropdown-item">Fashion</a>
+                  </div>
+                 
+            </div>
+            
+          </div>
+          <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+          <!-- #region ship to-->
+          <div class="dropdown " id="button2">  
+          
+            <button type="button" class="btn  dropdown-toggle text-white " data-toggle="dropdown">Ship to<br>
+             <img src="/Indian_flag.webp " id="flag"> /INR</button>
+             
+           <div class="dropdown-menu dropdown-menu-right" id="drop">
+                   <h3 >Select Regional Settings</h3>
+                   <p>Ship to</p>
+                   <select >
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="France">France</option>
+                    <option value="Italy">Italy</option>
+                    <option value="Russia">Russia</option>
+                   
+                   </select>
+                   <p>Currancy</p>
+                   <select >
+                    <option value="India">INR</option>
+                    <option value="India">USD</option>
+                    <option value="India">EUR</option>
+                    <option value="India">JPY</option>
+                    <option value="India">BRL</option>
+                  </select>
+                  <button class="bg-primary text-white" style="border: none;margin-top:15px;margin-left:80%;border-radius: 5px;">Save</button>
+             </div>
+           </div>
+        
+           <!-- #region signin --> 
+           <div class="dropdown " id="button3">  
+          
+          <button type="button" class="btn  dropdown-toggle text-white " data-toggle="dropdown">Sign in</button>  
+         <div class="dropdown-menu dropdown-menu-right" id="drop1">
+          <p style="text-align: center;">Welcome to Geekbuying</p>
+          <button class="bg-primary" id="join">Join</button>
+          <button id="signin">Sign in</button>
+          <br><br>
+          <hr style="width: 40%;margin-left:5px">
+          <hr style="width: 40%;margin-right:5px;margin-top: -20px;">
+          <p style="text-align: center;">or</p>
+           <img src="/google.png" alt="n">
+           </div>
+           <button class="bg-primary text-white" style="border: none;"><i class="fa-solid fa-cart-shopping"></i>cart</button>
+         </div>
+        </nav>
+        </div>
+         <!-- #region third nav bar in main nav bar-->
+    <div class="bg-primary" id="thirdnav">
+      <nav class="nav  bg-primary position-static ">
+    
+      <div class="btn-group mb-2 ">
+       <div class="btn-group" >
+         <button id="b" type="button" class=" dropdown-toggle bg-primary text-white" data-toggle="dropdown">Categories</button>
+         <div class="dropdown-menu" >
+         <button type="button" class="dropdown-item" style="font-size: 14px;">Local Warehouses</button>
+         <button type="button" class="dropdown-item" style="font-size: 14px;">Sports & Outdoors</button>
+         <button type="button" class="dropdown-item" style="font-size: 14px;">Smart Home & Garden</button>
+         <button type="button" class="dropdown-item" style="font-size: 14px;">Consumer Electronics</button>
+         <button type="button" class="dropdown-item" style="font-size: 14px;">TV Boxes & Mini PCs</button>
+         <button type="button" class="dropdown-item" style="font-size: 14px;">Computers & Tablets</button>
+         <button type="button" class="dropdown-item" style="font-size: 14px;">Toys & Hobbies</button>
+         <button type="button" class="dropdown-item" style="font-size: 14px;">Phones & Accessories</button>
+          </div>
+       </div>
+        </div>
+        
+      <button type="button" class="btn btn-primary" id="new">New</button>
+      <button type="button" class="btn btn-primary">Bestselling</button>
+      <button type="button" class="btn btn-primary">Brand</button>
+      <button type="button" class="btn btn-primary">Clearance</button>
+      <button type="button" class="btn btn-primary">Deals</button>
+      <button type="button" class="btn btn-primary">Coupon</button>
+      <button type="button" class="btn btn-primary">App Only</button>
+      </div>
+       </nav>
+    
+     </div>
+
+<!-- ***************************** home region ********************************************-->
+    <div id="container">
+       <div id="top">
+        <div id="box1"> 
+             <button id="left" onclick="leftslid()">&lt;</button>
+            <img src="/1.jpg" alt="not found" id="image">
+            <button id="right" onclick="rightslid()">&gt;</button>
+           </div>
+        <div id="box2"><img  src="https://img.gkbcdn.com/s3/bn/2205/424040350160-626f35a32b40c9339cabd74a.jpg" alt=""></div>
+         <div id="box3"> <img src="https://img.gkbcdn.com/s3/bn/2205/471160350x242-626f38162b40c9339cabd74e.jpg" alt=""></div>
+        </div>
+<!-- #region  second row created-->
+   <div id="ship">
+        <div id="outerRow2">
+            <h3>Trending Categories</h3>
+           <div id="row2"></div>
+           </div>
+<!-- #region  third row created-->
+         <div id="outerRow3">
+           <h3>New For You<a href="See more">See More</a></h3>
+           <div id="row3"></div>
+          </div>
+ 
+<!-- #region fifth row created-->
+         <div id="outerRow5">
+            <h3>Best Sellers <a href="">See more</a></h3>
+         <div id="row5"></div>
+         </div>
+<!-- #region sixth row created-->
+       <div id="outerRow6">
+        <h3>Popular Brands</h3>
+       <div id="row6"></div>
+       </div></div>
+<!-- #region seventh row created-->
+<div id="row7"> 
+    <div id="rowleft7">
+    <button id="leftRow" onclick="leftslide()">&lt;</button>
+    </div>
+   <img src="/Images 1/1.jpg" alt="not found" id="image1">
+   <img src="/Images 1/2.jpg" alt="not found" id="image2">
+   <img src="/Images 1/3.jpg" alt="not found" id="image3">
+
+   <div id="rowright7">
+   <button id="rightRow" onclick="rightslider()">&gt;</button>
+  </div></div>
+</div>
+<!-- #region footer section in home page-->
+<div class="footer-main">
+    <div class="footer-div">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <div class="footer-input">
+                    <input type="text" placeholder="Enter email to get 5% off coupon">
+                    <button>Subscribe</button>
+                </div>
+                <div class="footer-left-bottom">
+                    <h4>About Geekbuying</h4>
+                    <p>We at Geekbuying are all about making our customer's lives comfortable and smarter. 
+                        We have a massive selection of products and offer unbeatable prices. 
+                        If you are looking for the latest and the greatest product in categories 
+                        like smart home and outdoor gadgets,Geekbuying is where you should be.
+                        <br>
+                       Geekbuying is the ultimate shopping hub for new releases covering smart 
+                       home products like vacuum cleaners, fitness equipment like treadmills, 
+                       top of the line home and office furniture, outdoor items including e-bikes, 
+                       scooters, and other consumer goods like TV boxes, RC Toys and so much more! 
+                       Shop for your favorite brands and products today!</p>
+                </div>
+            </div>
+            <div class="footer-right">
+               <div class="footer-right-top">
+                   <div class="footer-right-top-left">
+                    <div >
+                        <img src="https://img.icons8.com/material-sharp/24/000000/facebook-f.png"/>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/material-rounded/24/000000/youtube-play.png"/>
+                    </div>
+                    <div>
+                        <img src="https://freepngimg.com/save/62837-instagram-icons-photography-computer-logo-icon/512x512"/>
+                    </div>
+                    <div>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeB2AoeJlkzKOVRWqC6SMiZB34yKHcRFufoyM7zbz3i0cEAYe0hOtex9I9PYS6w-aBliM&usqp=CAU"/>
+                    </div>
+                    <div>
+                        <img src="https://img.icons8.com/material-sharp/24/000000/facebook-f.png">
+                    </div>
+                   </div>
+                   <div class="footer-right-top-right">
+                    <div >
+                        <img src="https://cdn3.iconfinder.com/data/icons/devices-57/100/Smartphone-512.png"/>
+                        <p>Mobile</p>
+                        
+                    </div>
+                    <div>
+                        <img src="https://www.svgrepo.com/show/145061/android-logo.svg"/>
+                        <p>Anroid</p>
+                    </div>
+                    <div>
+                        <img src="data:image/png;base64,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"/>
+                        <p>IOS</p>
+                    </div>
+                   </div>
+               </div> 
+               <div class="footer-right-bottom">
+                <div class="footer-right-bottom-left">
+                    <h4>Help</h4>
+                   <p>Order status</p>
+                   <p>About us</p>
+                   <p>Contact us</p>
+                   <p>Warranty</p>
+                   <p>FAQs</p>
+                   <p>Sitemap</p>
+
+                </div>
+                <div class="footer-right-bottom-center">
+                    <h4>Support</h4>
+                    <p>Payment information</p>
+                    <p>Shipping guide</p>
+                    <p>Wholesale</p>
+                    <p>Affilliates</p>
+                    <p>Student discount</p>
+                    <p>Youth discount</p>
+                    <p>Request a sample</p>
+
+                </div>
+                <div class="footer-right-bottom-right">
+                    <h4>Policies</h4>
+                   <p>Terms & conditions</p>
+                   <p>Returns policy</p>
+                   <p>Privacy</p>
+                   <p>Declration</p>
+                   <p>Customs</p>
+
+                </div>
+               </div> 
+                
+                
+            </div>
+     </div>
+     <div>
+         <h4>Popular search</h4>
+         <div class="footer-popular">
+           
+             <div>Geekbuying Coupon</div>
+             <div> Roborock Q7 Max</div>
+             <div>Tronsmart Bluetooth Speakers</div>
+             <div>Windows Mini PC</div>
+             <div>Android tv boxes</div>
+             <div>LDS Robot Vaccum</div>
+             <div>Electric Bike</div>
+             <div>Oneplus 10 pro</div>
+             
+       </div>
+     </div>
+     <div class="footer-lang">
+         <p>English | Español | Français | Deutsch | Italiano | Português | Nederlands | Polski | Русский | Türkçe | ελληνικά | Magyar | لعربية| עברית | ไทย | 日本語</p>
+     </div>
+     <div class="footer-payment">
+         <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/footicons.jpg" alt="">
+         <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/geek_reviews.jpg?v=20220111" alt="" width="150px">
+     </div>
+     <div class="footer-copyright">
+    <p>Copyright © 2012-2022 GeekBuying.com. All rights reserved.</p>
+     </div>
+    </div>
+</div>
+
+</body>
+</html>
+<script src="/navbar.js"></script>
+<script src="/index.js"></script>

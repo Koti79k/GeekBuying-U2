@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar</title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+   <!-- #region font Awesome link for using icons-->
+<script src="https://kit.fontawesome.com/e4868983fb.js" crossorigin="anonymous"></script>
+        <!-- #region connecting navbar of css-->
+<link rel="stylesheet" href="/navbar.css">
+
+</head>
+<body>
+<!-- #region nav bar region-->
+<div class="bg-primary">
+<nav class="nav justify-content-end bg-primary position-static ">
+  <!-- #region first drop down menu-->
+ 
+  <div class="dropdown ">
+     <a href="#" class=" nav-item nav-link text-white dropdown-toggle" data-toggle="dropdown">Saving Big with our app!</a>
+       <div class="dropdown-menu kot dropdown-menu-right ">
+            <a href="#" class="dropdown-item" id="text">Get exclusive app deals and discounts,<br>
+               download our app & SAVE</a>
+            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/android_app.png"style="width:60%" class="dropdown-item">
+          <div id="ko">
+            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/app_store.jpg" class="dropdown-item "></img>
+            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/google_play.jpg" class="dropdown-item "></img>
+            <img src="https://content1.geekbuying.com/V1.4/en/images/index_images/gallery.jpg" class="dropdown-item "></img>
+          </div>
+             <hr width="80%" color="white"  style="margin-top: 40px;"  >
+             <a href="#" class="dropdown-item" id="text" style="margin-top: -15px;">Go to mobile site</a>
+      </div>
+    </div>
+     <!-- #region second drop down menu-->
+    <div class="dropdown">
+      <a href="#" class=" nav-item nav-link text-white dropdown-toggle" data-toggle="dropdown">Language</a>
+      <div class="dropdown-menu dropdown-menu-right" >
+             <a href="#" class="dropdown-item">English</a>
+             <a href="#" class="dropdown-item">Italiano</a>
+             <a href="#" class="dropdown-item">Deutsch</a>
+             <a href="#" class="dropdown-item">Español</a>
+             <a href="#" class="dropdown-item">Français</a>
+             <a href="#" class="dropdown-item">Português</a>
+             <a href="#" class="dropdown-item">Slovenčina</a>
+             <a href="#" class="dropdown-item">Magyar</a>
+             
+       </div>
+     </div>
+     <div class="dropdown">
+      <a href="#" class=" nav-item nav-link text-white dropdown-toggle" data-toggle="dropdown">Support Center</a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a href="#" class="dropdown-item">Live Chat</a>
+        <a href="#" class="dropdown-item">Ticket</a>
+        <a href="#" class="dropdown-item">Help Center</a>
+      </div>
+     </div>
+   
+  </nav>
+</div>
+
+
+                  <!-- #region second nav bar-->
+<div class="bg-primary">
+  <hr  style="margin-top: -1px;background-color: #E0E0E0;" >
+ 
+   <!-- #region search bar-->
+   <nav class="nav justify-content-start bg-primary position-static ">
+    <img src="/logo.png" alt="n" >
+    <input type="search" id="searchBar" style="outline: none;" placeholder="Search by keywords" >
+<!-- #region dropdown menu in search bar-->
+
+    <div class="dropdown " id="button1">  
+       <button type="button" class="btn  dropdown-toggle" data-toggle="dropdown">All Categories</button>
+      <div class="dropdown-menu dropdown-menu-left">
+              <a href="#" class="dropdown-item">All Categories</a>
+              <a href="#" class="dropdown-item">Smart Home & Garden</a>                                                           
+              <a href="#" class="dropdown-item">Phones & Accessories</a>
+              <a href="#" class="dropdown-item">Computers, Tablets & Accessories</a>             
+              <a href="#" class="dropdown-item">Wearable Devices </a>                                                                       
+              <a href="#" class="dropdown-item">Automobiles & Motorcycles</a>
+              <div id="right">
+                <a href="#" class="dropdown-item">Sports & Outdoors</a>               
+                <a href="#" class="dropdown-item">Consumer Electronics </a>                                                                          
+                <a href="#" class="dropdown-item">TV Boxes & Mini PCs</a>               
+                <a href="#" class="dropdown-item">Toys & Hobbies </a>                       
+                <a href="#" class="dropdown-item">Security System</a>                                                                                       
+                <a href="#" class="dropdown-item">Fashion</a>
+              </div>
+             
+        </div>
+        
+      </div>
+      <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+      <!-- #region ship to-->
+      <div class="dropdown " id="button2">  
+      
+        <button type="button" class="btn  dropdown-toggle text-white " data-toggle="dropdown">Ship to<br>
+         <img src="/Indian_flag.webp " id="flag"> /INR</button>
+         
+       <div class="dropdown-menu dropdown-menu-right" id="drop">
+               <h3 >Select Regional Settings</h3>
+               <p>Ship to</p>
+               <select >
+                <option value="India">India</option>
+                <option value="USA">USA</option>
+                <option value="France">France</option>
+                <option value="Italy">Italy</option>
+                <option value="Russia">Russia</option>
+               
+               </select>
+               <p>Currancy</p>
+               <select >
+                <option value="India">INR</option>
+                <option value="India">USD</option>
+                <option value="India">EUR</option>
+                <option value="India">JPY</option>
+                <option value="India">BRL</option>
+              </select>
+              <button class="bg-primary text-white" style="border: none;margin-top:15px;margin-left:80%;border-radius: 5px;">Save</button>
+         </div>
+       </div>
+    
+       <!-- #region signin --> 
+       <div class="dropdown " id="button3">  
+      
+      <button type="button" class="btn  dropdown-toggle text-white " data-toggle="dropdown">Sign in</button>  
+     <div class="dropdown-menu dropdown-menu-right" id="drop1">
+      <p style="text-align: center;">Welcome to Geekbuying</p>
+      <button class="bg-primary" id="join">Join</button>
+      <button id="signin">Sign in</button>
+      <br><br>
+      <hr style="width: 40%;margin-left:5px">
+      <hr style="width: 40%;margin-right:5px;margin-top: -20px;">
+      <p style="text-align: center;">or</p>
+       <img src="/google.png" alt="n">
+       </div>
+       <button class="bg-primary text-white" style="border: none;"><i class="fa-solid fa-cart-shopping"></i>cart</button>
+     </div>
+    </nav>
+    </div>
+     <!-- #region third nav bar in main nav bar-->
+<div class="bg-primary" id="thirdnav">
+  <nav class="nav  bg-primary position-static ">
+
+  <div class="btn-group mb-2 ">
+   <div class="btn-group" >
+     <button id="b" type="button" class=" dropdown-toggle bg-primary text-white" data-toggle="dropdown">Categories</button>
+     <div class="dropdown-menu" >
+     <button type="button" class="dropdown-item" style="font-size: 14px;">Local Warehouses</button>
+     <button type="button" class="dropdown-item" style="font-size: 14px;">Sports & Outdoors</button>
+     <button type="button" class="dropdown-item" style="font-size: 14px;">Smart Home & Garden</button>
+     <button type="button" class="dropdown-item" style="font-size: 14px;">Consumer Electronics</button>
+     <button type="button" class="dropdown-item" style="font-size: 14px;">TV Boxes & Mini PCs</button>
+     <button type="button" class="dropdown-item" style="font-size: 14px;">Computers & Tablets</button>
+     <button type="button" class="dropdown-item" style="font-size: 14px;">Toys & Hobbies</button>
+     <button type="button" class="dropdown-item" style="font-size: 14px;">Phones & Accessories</button>
+      </div>
+   </div>
+    </div>
+    
+  <button type="button" class="btn btn-primary">New</button>
+  <button type="button" class="btn btn-primary">Bestselling</button>
+  <button type="button" class="btn btn-primary">Brand</button>
+  <button type="button" class="btn btn-primary">Clearance</button>
+  <button type="button" class="btn btn-primary">Deals</button>
+  <button type="button" class="btn btn-primary">Coupon</button>
+  <button type="button" class="btn btn-primary">App Only</button>
+  </div>
+   </nav>
+
+ </div>
+</body>
+</html>
+<script src="/navbar.js"></script>
+
+
+
+
+
+

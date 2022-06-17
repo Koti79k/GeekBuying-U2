@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment page</title>
+  
+    <style>
+#paytop{
+    height: 100px;
+    width: auto;
+    background-image: linear-gradient(to bottom, #318FFB, #06f);
+    margin-left: -20px;
+    padding-right: 50px;
+   
+}
+#paytop>img{
+    margin-left: 12%;
+    margin-top: 2%;
+}
+#paytop>img+h2{
+    font-family: arial;
+    margin-top: -50px;
+    margin-left: 35%;
+    color: white;
+    font-size: 17px;
+    font-weight: 100;
+}
+        #disk
+        {
+            width: 80%;
+            height: 50px;
+           
+            display: flex;
+            margin: auto;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+       
+
+        #disk>h1{
+            font-size: 21px;
+            font-family: 'Open Sans', sans-serif !important;
+        }
+
+        #main{
+        
+            margin: auto;
+            /* border: 1px solid black; */
+            width: 32%;
+            height: 490px;
+            padding-top: 20px;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            background-color: white;
+          
+
+        }
+        #main>#payment
+        {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            margin: auto;
+            margin-top: 30px;  
+            gap: 20px; 
+        }
+        #labe{
+            font-family: arial;
+            font-size: 20px;
+            margin-left: -60%;
+            line-height: 50px;
+            display: flex;
+        }
+
+        .Input
+        {
+            line-height: 50px;
+            height: 50px;
+            font-size: 20px;
+            margin-top: -70px;
+        }
+
+        #main>#payment>#push
+        {
+            color: white;
+            background-color: rgb(54, 54, 224);
+            border: 0px;
+            border-radius: 10px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        #main>#payment>#push:hover
+        {
+            color: white;
+            background-color: rgb(243, 77, 77);
+        }
+     
+    </style>
+</head>
+<body>
+    <div id="paytop">
+        <img src="/logo.png" alt="">
+        <h2>Payment Method Using Card</h2>
+    </div>
+    <div id="main">
+
+        <div id="disk">
+            <h1>Payable Amount : 4589.22</h1>
+            <h2></h2>
+        </div>
+        
+        <form action="" id="payment">
+             <label id="labe" for="">Card Number</label>
+            <input type="number" placeholder="Enter Card Number" id="card" class="Input">
+            <label id="labe" for="">Card Expiry Date</label>
+            <input type="date" placeholder="Enter Expiry Date" id="date" class="Input">
+            <label id="labe" for="">Card Cvv Number</label>
+            <input type="number" placeholder="Enter CVV" id="Cvv" class="Input">
+            <label id="labe" for="">Mobile Number</label>
+            <input type="number" placeholder="Enter Mobile Number" id="mobile" class="Input">
+            <input type="submit" class="Input" id="push">
+         
+        </form>
+
+       
+    </div>
+</body>
+</html>
+
+<script>
+var output=JSON.parse(localStorage.getItem("payment"));
+console.log(output);
+
+var form=document.querySelector("#payment").addEventListener("submit",PayFn);
+
+function PayFn()
+{
+    event.preventDefault();
+
+  var DataObj= {
+       num:payment.card.value,
+       Date:payment.date.value,
+       cvv:payment.Cvv.value,
+       mob:payment.mobile.value
+   }
+
+   console.log(DataObj.Date)
+
+   if(DataObj.num=="1234567890123456" && DataObj.Date=="2022-05-08" && DataObj.cvv=="789" && DataObj.mob!="")
+   {
+       alert("OTP Sent To Your Mobile Number");
+       localStorage.setItem("PaymentData",JSON.stringify(DataObj));
+       window.location.href="otp.html"
+   }
+
+   if(DataObj.num=="1234567890123456" && DataObj.Date=="2022-05-08" && DataObj.cvv=="789" && DataObj.mob=="")
+   {
+       alert("Payment Sucessful");
+   }
+
+   else if(DataObj.num!="1234567890123456" || DataObj.Date!="2022-05-08" || DataObj.cvv!="789" && DataObj.mob==""){
+       alert("Error: Data Incorrect")
+   }
+   
+}
+
+
+</script>

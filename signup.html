@@ -1,86 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in or register</title>
+    <link rel="shortcut icon" type="image/ico" href="https://m.geekbuying.com/favicon.ico">
     
-    <style>
-        form{
-            height:350px;
-            width: 400px;
-            margin: auto;
-            background-color: white;
-            line-height: 65px;
-            margin-top: 10%;
-            border-radius: 5px;
-        }
-        #fo{
-            height:auto;
-            width: 350px;
-            margin: auto;
-          
-        }
-        button{
-            width: 100%;
-            height:40px;
-            background-color: blue;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        input{
-            width: 98%;
-            height:35px;
-        }
-        body{
-            background-color: #E0E0E0;
-
-        }
-    </style>
-</head>
-<body>
-
-    <form>        
-        <div id="fo">
-            <h3 style="margin-top:-8px;margin-bottom: -10px;">Create your account</h3>
-        <input id="name" type="text" placeholder="Enter your name">
-        <input id="email" type="email" placeholder="Enter Email address">
-        <input id="password" type="password" placeholder="Enter password">
-        <button class="bg-primary">Create account</button>
-       </div>
-    </form>
-</body>
+    <link rel="stylesheet" href="credential/signup.css" />
+  </head>
+  <body>
+    <div id="logo"><img src="https://content1.geekbuying.com/V1.4/en/images/indexV7/Geekbuying.png" alt=""></div>
+    <div  id="container">
+      <div id="signup">
+        <div id="top_head">
+          <h2 id="create">Create your account</h2>
+         <a href="signin.html"> <h2 id="signin">Sign In</h2></a>
+        </div>
+        <input id="name" type="text" placeholder="Nick name" />
+        <input id="email" type="email" placeholder="Email address" />
+        <input id="password" type="password" placeholder="Password" />
+        <div id="access">
+          <input id="access_code" type="text" placeholder="Access code" />
+          <img id="random" src="https://www.geekbuying.com/QA/QACode" alt="" />
+        </div>
+       <div id="checkbox">
+        <label id="login_check" >
+            <input  type="checkbox" id="cb">
+            <span id="p">
+                I agree to Geekbuying's
+                <a href="https://www.geekbuying.com/help/about/terms_of_use" target="_blank" id="u" >Terms of Use</a> &amp; <a href="https://www.geekbuying.com/help/about/privacy_policy" target="_blank" id="u">Privacy Policy</a>.
+            </span>
+            <em class="error_color"></em>
+        </label>
+    </div>
+<div id="submit" onclick="submit()">Create account</div>
+      </div>
+    </div>
+  </body>
 </html>
-<script>
-    let form=document.querySelector("form")
-    let userData=JSON.parse(localStorage.getItem("userData"))||[];
-    form.addEventListener("submit",function(event){
-     event.preventDefault()
-        let data={
-            name:form.name.value ,
-            email:form.email.value,
-            password:form.password.value,
-        }
-        if(checkEmails(data.email)===true){
-         userData.push(data)
-         localStorage.setItem("userData",JSON.stringify(userData));
-        }
-        else{
-            alert("Account already Exist")
-        }
-    })
-    function checkEmails(email){
-        let filtered=userData.filter(function(element){
-            return email===element.email;
-        })
-        if(filtered.length>0){
-            return false
-        }
-        else{
-            return true
-        }
-    }
-</script>
+<script src="./credential/signup.js"></script>

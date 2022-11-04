@@ -4,143 +4,138 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shipping Address</title>
-    
-    <style>
-        body{
-            margin-bottom: 100px;
-        }
-#paytop{
-    height: 100px;
-    width: auto;
-    background-image: linear-gradient(to bottom, #318FFB, #06f);
-    margin-left: -20px;
-    padding-right: 50px;
-   
-}
-#paytop>img{
-    margin-left: 12%;
-    margin-top: 2%;
-}
-#paytop>img+h2{
-    font-family: arial;
-    margin-top: -50px;
-    margin-left: 35%;
-    color: white;
-    font-size: 17px;
-    font-weight: 100;
-}
-h1{
-    margin-left: 10%;
-    font-family: arial;
-    font-size: 20px;
-}
-/**********************    paytop section ended   **************************/
-#pay{
-    height:600px;
-    width: 80%;
-    margin: auto;
-    padding: 50px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;
-    line-height: 60px;
-}
-#pay>form input,#pay>form select{
-    height: 30px;
-    width: 30%;
-}
-form>button{
-    width: 13%;
-    height: 40px;
-    margin-top: 20px;
-    margin-left: 12%;
-    background-image: linear-gradient(to bottom, #318FFB, #06f);
-    border: none;
-    border-radius: 5px;
-    color: white;
-    cursor: pointer;
-}
-
-    </style>
+    <title>Shipping</title>
+    <link rel="shortcut icon" type="image/ico" href="https://m.geekbuying.com/favicon.ico">
+    <link rel="stylesheet" href="./Shipping page/shipping.css">
 </head>
 <body>
-    <div id="paytop">
-    <img src="/logo.png" alt="">
-    <h2>Secure Checkout</h2>
-</div>
-    <h1>Shipping Address</h1>
-    <div id="pay">
-   
-    <form id="form">
-        <label for="First Name" > First Name :</label>
-         <input id="a" type="text"><br>
+    <div id="top_div_shipping">
+        <img src="./Shipping page/Screenshot (640).png" alt="">
+        <p>Shipping Address </p>
+    </div>
+   <div id="below_top_div_shipping"><p>To ensure delivery and prevent delays, please enter the valid alphabetic character.</p></div>
+   <div id="main_div_form">
 
-         <label for="First Name">Last Name :</label>
-          <input id="b" type="text"><br>
-          
-          <label for="">Country/Region</label>
-        <select name="" id="c">
+    <form action="" id="form">
+        <label for=""> <span>*</span> First Name:</label>
+        <input type="text" name="firstName" id="" required> <br>
+        <label for=""> <span>*</span> Last Name:</label>
+        <input type="text" name="lastName" id="" required> <br>
+        <label for=""> <span>*</span> Email:</label>
+        <input type="email" name="lastName" id="" required><span id="notee"> Please ensure it is correct to receive important order information and allow you to track your order.</span> <br>
+        <label for=""> <span>*</span> Country/Region:</label>
+        <select name="" id="country">
+            <option value="">Select country</option>
             <option value="India">India</option>
-            <option value="USA">USA</option>
-            <option value="USA">Russia</option>
-            <option value="USA">France</option>
+            <option value="China">China</option>
+            <option value="United States">United States</option>
+            <option value="Italy">Italy</option>
+            <option value="Australia">Australia</option>
+            <option value="Germany" >Germany</option>
+            <option value="Nepal" >Nepal</option>
+            <option value="Aland Islands" >Åland Islands</option>
+            <option value="Albania" >Albania</option>
+            <option value="Algeria" >Algeria</option>
+             <option value="Andorra" >Andorra</option>
+        </select> <br>
+
+        <label for=""> <span>*</span> State/Province:</label>
+
+        <select id="state" name="country-state">
+            <option value="">Select state</option>
+            <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+            <option value="Andhra Pradesh">Andhra Pradesh</option>
+            <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+            <option value="Assam">Assam</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Chandigarh">Chandigarh</option>
+            <option value="Chhattisgarh">Chhattisgarh</option>
+            <option value="Dadra and Nagar Haveli">Dadra and Nagar Haveli</option>
+            <option value="Daman and Diu">Daman and Diu</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Goa">Goa</option>
+            <option value="Gujarat">Gujarat</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Himachal Pradesh">Himachal Pradesh</option>
+            <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+            <option value="Jharkhand">Jharkhand</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Kerala">Kerala</option>
+            <option value="Ladakh">Ladakh</option>
+            <option value="Lakshadweep">Lakshadweep</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Manipur">Manipur</option>
+            <option value="Meghalaya">Meghalaya</option>
+            <option value="Mizoram">Mizoram</option>
+            <option value="Nagaland">Nagaland</option>
+            <option value="Odisha">Odisha</option>
+            <option value="Puducherry">Puducherry</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Sikkim">Sikkim</option>
+            <option value="Tamil Nadu">Tamil Nadu</option>
+            <option value="Telangana">Telangana</option>
+            <option value="Tripura">Tripura</option>
+            <option value="Uttar Pradesh">Uttar Pradesh</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="West Bengal">West Bengal</option>
         </select><br>
 
-        <label for="">State/Province :</label>
-        <select name="" id="d">
-            <option value="India">Andhra Pradesh</option>
-            <option value="USA">Telanga</option>
-            <option value="USA">Madhya Pradesh</option>
-            <option value="USA">Tamil Nadu</option>
-            <option value="USA">Kerla</option>
-        </select><br>
-
-        <label for="">City / village :</label>
-         <input id="e" type="text" placeholder="Your City"><br>
-
-         <label for="">Zip/Postalcode</label>
-         <input id="f" type="text" placeholder="Your ZIP/postal code"><br>
-
-         <label for="">Address line 1:</label>
-         <input id="g" type="text" placeholder="Street Address, Company name"><br>
-
-         <label for="">Address line 2:</label>
-         <input id="h" type="text" placeholder="Appartment ,Unit ,floor"><br>
-
-         <label for="">Phone Number</label>
-         <input id="i" type="number" placeholder="Phone number"><br>
-
-         <button id="j" id="but">Continue </button>
-            
+        <label for=""> <span>*</span> City:</label>
         
+        <select name="" id="city">
+            <option value="">Select City</option>
+            <option value="Badarpur">Badarpur</option>
+            <option value="Burari">Burari</option>
+            <option value="Chilla Saroda Bangar">Chilla Saroda Bangar</option>
+            <option value="Firozabad">Firozabad</option>
+            <option value="Tughlakabad">Tughlakabad</option>
+            <option value="Mehrauli">Mehrauli</option>
+            <option value="Shergarh">Shergarh</option>
+            <option value="Qila Rai Pithora">Qila Rai Pithora</option>
+            <option value="Shahjehabanad">Shahjehabanad</option>
+            <option value="Siri">Siri</option>
+        </select><br>
+
+        <label for=""> <span>*</span> Zip/Postal code:</label>
+        <input type="number" id="pincode"><br>
+        <label for=""> <span>*</span>Address:</label>
+        <input type="text" id="address"> <br>
+        <label for=""> <span>*</span>Phone Number:</label>
+        <input type="number" name="" id="number"><span id="note"> Required by courier/postman to ensure delivery and prevent delays. Please enter correct number.</span><br>
+        <input type="submit" name="" id="submit" value="Save">
     </form>
-</div>
+   </div>
+
+   
+    <h3 class="divHead">Product List</h3>
+    <div id="productList"></div>
+
+    <h3 class="divHead">Shipping & Delivery</h3>
+    <div id="delivery">
+        <div>
+            <p>Order Subtotal:</p>
+            <p id="aws"></p>
+        </div>
+        <div>
+            <p>Shipping Cost:</p>
+             <p>₹ 500</p>
+        </div>
+        <div>
+            <p>Grand Total:</p>
+            <h3 id="red"></h3>
+        </div>
+
+
+
+        <button id="btn"><h3>Place Order</h3> </button>
+
+    </div>
+
+    <div id="lastride"> <img src="https://content1.geekbuying.com/V1.4/en/images/shopcart_footicon.png" alt=""></div>
+   
 
 </body>
 </html>
-<script>
-   document.querySelector("#form").addEventListener("submit",myFo)
-   var jobArr = JSON.parse(localStorage.getItem("jobList")) || [];
-   function myFo(){
-   
-      event.preventDefault();
-      var jobObj = {
-        a: form.a.value,
-        b: form.b.value,
-        c: form.c.value,
-        d: form.d.value,
-        e: form.e.value,
-        f: form.f.value,
-        g: form.g.value,
-        h: form.h.value,
-        i: form.i.value,
-        j: form.j.value,
-
-      };
-      jobArr.push(jobObj);
-      console.log(jobArr);
-      localStorage.setItem("jobList", JSON.stringify(jobArr));
-      // redirect to applied jobs
-      window.location.href = "payment.html";
-    }
-   
-</script>
+<script src="./Shipping page/shipping.js"></script>
